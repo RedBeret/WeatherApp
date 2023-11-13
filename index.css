@@ -6,18 +6,19 @@
 }
 
 body {
-    background: #fdfcfc
+    background: #050505
 }
 
 .searchbox {
     width: 80%;
     max-width: 500px;
-    background:#0fdada;
+    background:#fbfbfb;
     color: #000000;
     margin: 30px auto 0;
     border-radius: 25px;
     padding: 45px;
     text-align: center;
+    height:fit-content
 }
 
 .inputfield {
@@ -55,7 +56,7 @@ body {
 .cityname {
     width: 80%;
     max-width: 500px;
-    background:#0fdada;
+    background:#c9c9c9;
     color: #000000;
     margin: 30px auto 0;
     border-radius: 25px;
@@ -63,110 +64,9 @@ body {
     text-align: center;
 }
 
-.airtemp {
-    width: 80%;
-    max-width: 500px;
-    background:#0fdada;
-    color: #000000;
-    margin: 30px auto 0;
-    border-radius: 25px;
-    padding: 30px;
-    text-align: center;
+.sun-icon {
+    height: 50px;
+    padding: 5px;
 }
 
-.precipitation {
-    width: 80%;
-    max-width: 500px;
-    background:#0fdada;
-    color: #000000;
-    margin: 30px auto 0;
-    border-radius: 25px;
-    padding: 30px;
-    text-align: center;
-}
- .wind {
-    width: 80%;
-    max-width: 500px;
-    background:#0fdada;
-    color: #000000;
-    margin: 30px auto 0;
-    border-radius: 25px;
-    padding: 30px;
-    text-align: center;
- }
 
- .humidity {
-    width: 80%;
-    max-width: 500px;
-    background:#0fdada;
-    color: #000000;
-    margin: 30px auto 0;
-    border-radius: 25px;
-    padding: 30px;
-    text-align: center;
- }
-
- .pressure {
-    width: 80%;
-    max-width: 500px;
-    background:#0fdada;
-    color: #000000;
-    margin: 30px auto 0;
-    border-radius: 25px;
-    padding: 30px;
-    text-align: center;
- }
-
- .dewpoint {
-    width: 80%;
-    max-width: 500px;
-    background:#0fdada;
-    color: #000000;
-    margin: 30px auto 0;
-    border-radius: 25px;
-    padding: 30px;
-    text-align: center;
- }
-
- .sunrise {
-    width: 80%;
-    max-width: 500px;
-    background:#0fdada;
-    color: #000000;
-    margin: 30px auto 0;
-    border-radius: 25px;
-    padding: 30px;
-    text-align: center;
- }
-
- .adddetails {
-    width: 80%;
-    max-width: 500px;
-    background:#0fdada;
-    color: #000000;
-    margin: 30px auto 0;
-    border-radius: 25px;
-    padding: 30px;
-    text-align: center;
- }
-
- .comments {
-    width: 80%;
-    max-width: 500px;
-    background:#0fdada;
-    color: #000000;
-    margin: 30px auto 0;
-    border-radius: 25px;
-    padding: 30px;
-    text-align: center;
- }
-
- .comment-button {
-    width: 35%;
-    background-color: #120fda;
-    color: #d01313;
-    margin: 5px auto 0;
-    border-radius: 12px;
-    padding: 2px;
-    text-align: center;
- }
