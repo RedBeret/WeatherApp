@@ -1,0 +1,136 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2fd;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.input-field,
+.button {
+    width: 100%;
+    padding: 10px;
+    margin: 0 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: #4d79ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.check-weather-card,
+.comment-section {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title,
+.comment-section h3 {
+    color: #4d79ff;
+}
+
+.temperature {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.weather-icon-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100px;
+}
+
+.weather-icon {
+    width: 80px;
+    margin: 20px 0;
+}
+
+.weather-info,
+.comment-section {
+    background: #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.weather-logo {
+    max-width: 80px;
+    margin: 20px auto;
+    display: block;
+}
+
+.temperature-toggle {
+    justify-content: center;
+    display: flex;
+    margin: 20px 0;
+}
+
+.comment-form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.comment-form input[type="text"] {
+    flex-grow: 1;
+    width: auto;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.comment-form button {
+    padding: 10px 20px;
+    flex-grow: 0;
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-section .input-field {
+    flex-grow: 1;
+    width: auto;
+}
+
+.search-section .button {
+    padding: 10px 20px;
+    flex-grow: 0;
+}
+
+footer {
+    background-color: #94a4bd;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* This is for the media query. Which is if we want to add responsiveness later on. 
+  @media (min-width: 768px) {
+
+}
+*/

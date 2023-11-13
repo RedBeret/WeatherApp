@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="./src/index.js" type="text/JavaScript"></script>
-    <link rel="stylesheet" src="index.css" />
-    <title>Document</title>
+    <title>Weather App</title>
+    <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="check-weather-card">
+            <img src="src/img/weather_logo_happycloud.png" alt="Happy Cloud Weather Logo" class="weather-logo">
+            <h1 class="app-title">Weather App</h1>
+            <div class="search-section">
+                <input type="search" id="cityInput" placeholder="Enter City" class="input-field" />
+                <button id="searchButton" class="button">Check Weather</button>
+            </div>
+            <div class="weather-details">
+                <div class="weather-info">
+                    <h2 id="weatherLocation">Location Name</h2>
+                    <div class="weather-icon-container" id="weatherIconContainer">
+                        <img id="weatherIcon" src="" alt="Weather Icon" class="weather-icon">
+                    </div>
+                    <p id="weatherTemperature">Temperature: --</p>
+                    <p id="weatherHumidity">Humidity: --%</p>
+                    <!-- we can add more on here if wanted -->
+                </div>
+                <div class="temperature-toggle">
+                    <input type="radio" id="celsius" name="temperatureUnit" checked>
+                    <label for="celsius">°C</label>
+                    <input type="radio" id="fahrenheit" name="temperatureUnit">
+                    <label for="fahrenheit">°F</label>
+                </div>
+            </div>
+            <div class="comment-section">
+                <h2>Comments</h2>
+                <ul id="comments-list">
+                    <!-- Comment list items will be added here when submitted -->
+                </ul>
+                <form class="comment-form">
+                    <input type="text" id="comment-input" placeholder="Add a comment" class="input-field" />
+                    <button id="submitComment" class="button">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>2023 Weather App. All rights reserved.</p>
+    </footer>
+    <script src="src/index.js" defer></script>
 </body>
+
 </html>
