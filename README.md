@@ -8,7 +8,7 @@
 
    ### Wireframes
 
-   ![Wireframe 1](wireframes/wireframe1.png)
+   ![Wireframe 1](src/img/wireframe1.png)
 
    Description: This wireframe illustrates the main user interface elements
 
@@ -16,7 +16,7 @@
 
    **Screenshot 1: Landing Page**
 
-   ![Screenshot 1](src/main.png)
+   ![Screenshot 1](src/img/wireframe2-hifi.png)
 
    Description: This screenshot shows the landing page of the Weather App 
   
