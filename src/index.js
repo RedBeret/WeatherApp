@@ -32,6 +32,13 @@ checkWeatherBtn.addEventListener('click', () => {
     }
 })
 
+// Event listener for the city input field to check weather on pressing enter
+cityInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        checkWeatherBtn.click();
+    }
+});
+
 // Function to fetch weather data for the city
 function fetchWeatherData(city) {
     const APIUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${APIKey}`;
