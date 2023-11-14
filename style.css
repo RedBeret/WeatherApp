@@ -2,7 +2,8 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e3f2fd;
+    background-color: #0092fa;
+    background-image: url(src/img/clouds.jpg);
     color: #333;
 }
 
@@ -29,6 +30,12 @@ body {
     color: white;
     border: none;
     cursor: pointer;
+    transition: transform .01s ease;
+}
+
+.button:active {
+    transform: scale(0.98);
+    background-color: #3d69ff;
 }
 
 .check-weather-card,
@@ -44,7 +51,7 @@ body {
 
 .card-title,
 .comment-section h3 {
-    color: #4d79ff;
+    color: #98b2ff;
 }
 
 .temperature {
@@ -66,7 +73,7 @@ body {
 
 .weather-info,
 .comment-section {
-    background: #f1f1f1;
+    background: #abe3ff;
     border-radius: 10px;
     padding: 10px;
     margin: 10px 0;
