@@ -20,6 +20,9 @@ const commentInput = el('comment-input');
 const commentBtn = el('submitcomment');
 const commentList = el('comments-list')
 const commentForm = el('comment-form')
+const windSpeed = el('WindSpeed');
+const windDirection = el('WindDirection');
+// const windGust = el('windGust');
 
 //variable used to store the current weather data
 let currentWeather;
@@ -74,6 +77,11 @@ function renderCityWeather(weather) {
         const temperatureFahenheit = Math.round((weather.main.temp * 9 / 5) + 32);
         cityTemp.textContent = `Temperature: ${temperatureFahenheit} °F`;
     }
+
+    windSpeed.textContent = `Wind Speed: ${weather.wind.speed} m/s`;
+    windDirection.textContent = `Wind Direction: ${weather.wind.deg}°`;
+    // windGust.textContent = `Wind Gust: ${weather.wind.gust} m/s`;
+
 }
 
 // Event listeners for the toggle buttons to switch between Celsius and Fahrenheit
