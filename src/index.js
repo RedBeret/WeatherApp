@@ -4,7 +4,7 @@ function el(id) {
 
 // Constants used for API key and URLs.
 const APIKey = "3db0d220d82f76e1b9db1bcdc4808baf";
-const APIUrlMetirc = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=portland";
+const APIUrlMetric = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=portland";
 const APIurlImperial = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
 
 //Global elements used in the app
@@ -48,7 +48,7 @@ function fetchWeatherData(city) {
 }
 
 // Fetch initial weather data for Portland. Metric constant above
-fetch(APIUrlMetirc + `&appid=${APIKey}`)
+fetch(APIUrlMetric + `&appid=${APIKey}`)
     .then(res => res.json())
     .then(renderCityWeather)
 
