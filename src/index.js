@@ -64,8 +64,15 @@ commentForm.addEventListener('submit', handleComments)
 
 function handleComments(event) {
     event.preventDefault();
-    renderComments(commentInput.value);
-    event.target.reset();
+    const commentText = commentInput.value;
+    if (commentText !== '') {
+        renderComments(commentText);
+        event.target.reset();
+    } else {
+        alert('Please enter a comment');
+    }
+
+
 }
 
 function renderComments(comment) {
