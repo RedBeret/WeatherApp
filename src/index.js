@@ -26,11 +26,11 @@ function fetchWeatherData(city) {
     const APIUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${APIKey}`;
 
     fetch(APIUrl)
-    .then(res => res.json())
-    .then(renderCityWeather)
-    .catch(error => {
-        console.error('Error fetching weather data', error);
-    });
+        .then(res => res.json())
+        .then(renderCityWeather)
+        .catch(error => {
+            console.error('Error fetching weather data', error);
+        });
 }
 
 
