@@ -25,6 +25,8 @@ const windDirection = el('WindDirection');
 // const windGust = el('windGust');
 const todaysHigh = el('high');
 const todaysLow = el('low');
+const weatherDesc = el('weatherDescription');
+
 
 //variable used to store the current weather data
 let currentWeather;
@@ -38,7 +40,7 @@ checkWeatherBtn.addEventListener('click', () => {
     if (city.trim() !== '') {
         fetchWeatherData(city);
         //render comments for selected city when checking weather
-         renderCommentsByCity(city)
+        renderCommentsByCity(city)
     }
 })
 
@@ -81,6 +83,8 @@ function renderCityWeather(weather) {
     cityName.textContent = weather.name;
     const iconURl = `https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`;
     weatherIcon.src = iconURl;
+    weatherDesc.textContent = `${weather.weather[0].description}`;
+
     cityHumidity.textContent = `Humidity: ${weather.main.humidity} %`
 
     if (toggleCelsius.checked) {
