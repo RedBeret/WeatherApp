@@ -28,7 +28,6 @@
                     <div id="weatherWind">
                         <p id="WindSpeed">Wind Speed: --</p>
                         <p id="WindDirection">Wind Direction: --</p>
-                        <p id="windGust">Wind Gust: -- </p>
                     </div>
 
 
@@ -43,13 +42,14 @@
             </div>
             <div class="comment-section">
                 <h2>Comments</h2>
+
+                <form id="comment-form" class="comment-form">
+                    <input type="text" id="comment-input" placeholder="Add a comment" required class="input-field" />
+                    <button id="submitComment" class="button">Post Comment</button>
+                </form>
                 <ul id="comments-list">
                     <!-- Comment list items will be added here when submitted -->
                 </ul>
-                <form id="comment-form" class="comment-form">
-                    <input type="text" id="comment-input" placeholder="Add a comment" class="input-field" />
-                    <button id="submitComment" class="button">Post Comment</button>
-                </form>
             </div>
         </div>
     </div>
