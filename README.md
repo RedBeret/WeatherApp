@@ -8,15 +8,27 @@
 
    ### Wireframes
 
-   ![Wireframe 1](src/img/wireframe1.png)
-
-   Description: This wireframe illustrates the main user interface elements
+<table>
+  <tr>
+    <th style="text-align: center;">LoFi Figma Wireframe (User Interface)</th>
+    <th style="text-align: center;">HiFi Figma Drawing (User Interface)</th>
+  </tr>
+  <tr>
+    <td style="text-align: center;">
+      <img src="src/img/wireframe1.png" alt="Wireframe 1" style="height: 800px; width: auto;">
+      <p>Description: This wireframe is for the user interface.</p>
+    </td>
+    <td style="text-align: center;">
+      <img src="src/img/wireframe2-hifi.png" alt="Screenshot 1: Landing Page" style="height: 800px; width: auto;">
+      <p>Description: This shows the hifi Figma drawing of the weather app.</p>
+    </td>
+  </tr>
+</table>
 
    ### Screenshots
 
    **Screenshot 1: Landing Page**
-
-   ![Screenshot 1](src/img/wireframe2-hifi.png)
+TBD
 
    Description: This screenshot shows the landing page of the Weather App 
   
