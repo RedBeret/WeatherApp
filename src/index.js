@@ -97,9 +97,8 @@ function renderCityWeather(weather) {
     }
 
     renderHighLowTemp(weather);
-    windSpeed.textContent = `Wind Speed: ${weather.wind.speed} m/s`;
-    windDirection.textContent = `Wind Direction: ${weather.wind.deg}°`;
-    // windGust.textContent = `Wind Gust: ${weather.wind.gust} m/s`;
+    windSpeed.textContent = `Wind: ${getWindDirection(weather.wind.deg)} ${weather.wind.speed} m/s`;
+
 
 }
 
@@ -133,6 +132,17 @@ function renderHighLowTemp(weather) {
         const lowTempFahrenheit = Math.round((weather.main.temp_min * 9 / 5) + 32);
         todaysLow.textContent = `Today's Low: ${lowTempFahrenheit} °F`;
     }
+}
+
+function getWindDirection(degrees) {
+    if (degrees >= 338 || degrees < 23) return 'N';
+    if (degrees >= 23 && degrees < 68) return 'NE';
+    if (degrees >= 68 && degrees < 113) return 'E';
+    if (degrees >= 113 && degrees < 158) return 'SE';
+    if (degrees >= 158 && degrees < 203) return 'S';
+    if (degrees >= 203 && degrees < 248) return 'SW';
+    if (degrees >= 248 && degrees < 293) return 'W';
+    if (degrees >= 293 && degrees < 338) return 'NW';
 }
 
 // Event listener for the comment button
