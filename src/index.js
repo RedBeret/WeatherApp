@@ -22,34 +22,16 @@ const commentList = el('comments-list')
 const commentForm = el('comment-form')
 const windSpeed = el('WindSpeed');
 const windDirection = el('WindDirection');
-// const windGust = el('windGust');
 const todaysHigh = el('high');
 const todaysLow = el('low');
 const weatherDesc = el('weatherDescription');
+let currentWeather; //variable used to store the current weather data
+let commentsByCity = {}; //object used to store commentts based on city names
 
-
-//variable used to store the current weather data
-let currentWeather;
-
-//object used to store commentts based on city names
-let commentsByCity = {};
-
-// Event listener for the check weather button 
-checkWeatherBtn.addEventListener('click', () => {
-    const city = cityInput.value;
-    if (city.trim() !== '') {
-        fetchWeatherData(city);
-        //render comments for selected city when checking weather
-        renderCommentsByCity(city)
-    }
-})
-
-// Event listener for the city input field to check weather on pressing enter
-cityInput.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-        checkWeatherBtn.click();
-    }
-});
+// Fetch initial weather data for Portland. Metric constant above
+fetch(APIUrlMetric + `&appid=${APIKey}`)
+    .then(res => res.json())
+    .then(renderCityWeather)
 
 // declares an asynchronous Function to fetch weather data for the city
 async function fetchWeatherData(city) {
@@ -72,11 +54,6 @@ async function fetchWeatherData(city) {
 }
 
 fetchWeatherData('Portland');
-
-// Fetch initial weather data for Portland. Metric constant above
-fetch(APIUrlMetric + `&appid=${APIKey}`)
-    .then(res => res.json())
-    .then(renderCityWeather)
 
 // Function to render the weather data for the city
 function renderCityWeather(weather) {
@@ -101,23 +78,6 @@ function renderCityWeather(weather) {
 
 
 }
-
-// Event listeners for the toggle buttons to switch between Celsius and Fahrenheit
-toggleCelsius.addEventListener('change', () => {
-    if (currentWeather && toggleCelsius.checked) {
-        const temperatureCelsius = Math.round(currentWeather.main.temp);
-        cityTemp.textContent = `Temperature: ${temperatureCelsius} °C`;
-        renderHighLowTemp(currentWeather);
-    }
-});
-
-toggleFahrenheit.addEventListener('change', () => {
-    if (currentWeather && toggleFahrenheit.checked) {
-        const temperatureFahrenheit = Math.round((currentWeather.main.temp * 9 / 5) + 32);
-        cityTemp.textContent = `Temperature: ${temperatureFahrenheit} °F`;
-        renderHighLowTemp(currentWeather);
-    }
-});
 
 //function added to render the high and low temp
 function renderHighLowTemp(weather) {
@@ -145,8 +105,40 @@ function getWindDirection(degrees) {
     if (degrees >= 293 && degrees < 338) return 'NW';
 }
 
-// Event listener for the comment button
-commentForm.addEventListener('submit', handleComments)
+// Event listener for the check weather button 
+checkWeatherBtn.addEventListener('click', () => {
+    const city = cityInput.value;
+    if (city.trim() !== '') {
+        fetchWeatherData(city);
+        renderCommentsByCity(city)
+        cityInput.value = '';
+    }
+})
+
+// Event listener for the city input field to check weather on pressing enter
+cityInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        checkWeatherBtn.click();
+        cityInput.value = '';
+    }
+});
+
+// Event listeners for the toggle buttons to switch between Celsius and Fahrenheit
+toggleCelsius.addEventListener('change', () => {
+    if (currentWeather && toggleCelsius.checked) {
+        const temperatureCelsius = Math.round(currentWeather.main.temp);
+        cityTemp.textContent = `Temperature: ${temperatureCelsius} °C`;
+        renderHighLowTemp(currentWeather);
+    }
+});
+
+toggleFahrenheit.addEventListener('change', () => {
+    if (currentWeather && toggleFahrenheit.checked) {
+        const temperatureFahrenheit = Math.round((currentWeather.main.temp * 9 / 5) + 32);
+        cityTemp.textContent = `Temperature: ${temperatureFahrenheit} °F`;
+        renderHighLowTemp(currentWeather);
+    }
+});
 
 // Function to handle the comments
 function handleComments(event) {
@@ -159,7 +151,8 @@ function handleComments(event) {
         // add the comment to the array with the selected city
         commentsByCity[selectedCity].push(commentText);
         renderComments(commentText);
-        event.target.reset();
+        // resets the form after comment is added
+        commentForm.reset();
     }
 }
 
@@ -183,12 +176,14 @@ function renderCommentsByCity(selectedCity) {
     });
 }
 
+// Event listener for the comment button
+commentForm.addEventListener('submit', handleComments)
 
+//Event Listener for the comment input field to add comment on pressing enter
+commentForm.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        handleComments(event);
+    }
+});
 
-
-
-
-
-
-
-// --------------
