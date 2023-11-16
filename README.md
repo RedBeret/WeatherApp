@@ -1,8 +1,11 @@
 # WeatherApp
 
 ## Overview
+The Weather App is an innovative web application that provides users with real-time weather data. Developed over a five-day sprint, our team, comprising David Butterton and Steven Espinoza, implemented Agile development techniques. We primarily focused on feature branching strategies, peer reviews, and merges to ensure code quality and collaborative integration of features.
 
-The Weather App is an innovative web application that provides users with real time weather data. Developed over a five day sprint, our team implemented Agile development techniques, primarily focusing on feature branching strategies, peer reviews, and merges to ensure code quality and collaborative integration of features.
+## Development Team
+- **David Butterton** ([@DavidButterton](https://github.com/DavidButterton))
+- **Steven Espinoza** ([@RedBeret](https://github.com/RedBeret))
 
 ## Development Approach
 
