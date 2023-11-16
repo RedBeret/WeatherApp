@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #0092fa;
     background-image: url(src/img/clouds.jpg);
+    background-size: cover;
     color: #333;
 }
 
