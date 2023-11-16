@@ -50,6 +50,7 @@ async function fetchWeatherData(city) {
     } catch (error) {
         //handles errors that may occur during the fetch process
         console.error('error fetching weather data', error)
+        alert('Please enter a valid city name. Try again!')
     }
 }
 
