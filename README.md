@@ -1,7 +1,7 @@
 # WeatherApp
 
 ## Introduction
-In today's fast-paced world, accurate and timely weather information is not just a convenience but a necessity. Recognizing this need, we've developed the Weather App, a user-centric web application that delivers real-time weather data for cities worldwide.
+In today's fast-paced world, accurate and timely weather information is not just a convenience but a necessity. Recognizing this need, we've developed the Weather App, a user focused web application that delivers real time weather data for cities worldwide.
 
 ## Overview
 The Weather App is an innovative web application that provides users with real-time weather data. Developed over a five-day sprint, our team, comprising David Butterton and Steven Espinoza, implemented Agile development techniques. We primarily focused on feature branching strategies, peer reviews, and merges to ensure code quality and collaborative integration of features.
