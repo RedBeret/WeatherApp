@@ -76,12 +76,6 @@ The image below showcases our Atlassian Trello Kanban board, which was pivotal i
    - **Description:** Users should have the ability to provide comments about their experiences with the weather in different cities. These comments 
     should be stored and displayed for reference.
 
-## Technical Implementation
-
-- **Version Control:** Leveraged Git for version control, with a clear branching strategy for feature integration.
-- **Peer Review:** Conducted thorough peer reviews to maintain code quality and foster knowledge sharing within the team.
-- **Agile Practices:** Utilized Agile practices to prioritize tasks, track progress, and adapt to changes swiftly.
-
 ## Future Directions
 
 - **Adaptability for Different Screen Sizes:** Plan to enhance the interface to be more adaptable to different screen sizes without a full responsive design implementation.
